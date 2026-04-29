@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVolt | Gestión Inteligente de Energía para tu Hogar</title>
+    <meta name="description"
+        content="Optimiza tu consumo, automatiza tus rutinas y ahorra en tu recibo de luz con el ecosistema Andean Ether.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="font-inter bg-bg text-dark overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white border-b border-primary/5 py-4 px-6 md:px-12 flex justify-between items-center"
+        id="navbar">
+        <a href="#inicio" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-primary">
+            <i class="ph-fill ph-plant text-accent text-3xl"></i> EcoVolt
+        </a>
+
+        <ul class="hidden md:flex gap-8 items-center font-medium" id="nav-links">
+            <li><a href="#inicio" class="text-dark hover:text-accent transition-colors relative group">Inicio<span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a>
+            </li>
+            <li><a href="#como-funciona" class="text-dark hover:text-accent transition-colors relative group">Cómo
+                    Funciona<span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a>
+            </li>
+            <li><a href="#funciones" class="text-dark hover:text-accent transition-colors relative group">Funciones<span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a>
+            </li>
+            <li><a href="#faq" class="text-dark hover:text-accent transition-colors relative group">FAQ<span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a>
+            </li>
+        </ul>
+
+        <div class="hidden md:block">
+            <a href="#registro"
+                class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">Acceder</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden text-primary text-3xl focus:outline-none">
+            <i class="ph ph-list"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 pt-24 px-6 flex flex-col gap-6">
+        <a href="#inicio" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Inicio</a>
+        <a href="#como-funciona" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Cómo
+            Funciona</a>
+        <a href="#funciones" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Funciones</a>
+        <a href="#faq" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">FAQ</a>
+        <a href="#registro"
+            class="mt-4 bg-accent text-white text-center py-3 rounded-full font-bold text-lg">Acceder</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="inicio"
+        class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <!-- Decoration Glow -->
+        <div
+            class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,_rgba(80,200,120,0.15)_0%,_transparent_70%)] rounded-full -z-10 pointer-events-none">
+        </div>
+
+        <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+            <div
+                class="inline-block px-4 py-1.5 bg-accent/15 text-primary-light border border-accent/30 rounded-full text-sm font-bold tracking-wide mb-6">
+                ✨ Nuevo Ecosistema Andean Ether
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
+                Gestión Inteligente de <span class="text-accent">Energía</span> para tu Hogar
+            </h1>
+            <p class="text-lg md:text-xl text-muted mb-8 leading-relaxed">
+                Optimiza tu consumo, automatiza tus rutinas y ahorra en tu recibo de luz de forma automática y
+                predictiva.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center">
+                <a href="#registro"
+                    class="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white py-3.5 px-8 rounded-full font-bold shadow-[0_8px_25px_rgba(80,200,120,0.3)] hover:shadow-[0_12px_30px_rgba(80,200,120,0.4)] hover:-translate-y-1 transition-all duration-300 text-center">
+                    Empezar Ahora
+                </a>
+                <a href="#como-funciona"
+                    class="w-full sm:w-auto text-primary font-bold py-3.5 px-8 hover:text-accent transition-colors flex items-center justify-center gap-2 group">
+                    Conocer más <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-auto" data-aos="fade-left"
+            data-aos-duration="1200" data-aos-delay="200">
+            <div class="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-3xl -z-10"></div>
+            <img src="assets/img/dashboard-mockup.png" alt="Dashboard Principal de EcoVolt"
+                class="w-full object-cover rounded-3xl shadow-2xl animate-floating bg-white/90 border border-white/80 p-2">
+            <!-- Placeholder if image missing -->
+            <div class="absolute inset-0 flex items-center justify-center -z-20 bg-gray-100 rounded-3xl">
+                <span class="text-gray-400">Mockup Image Placeholder</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Stats -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 -mt-10 lg:-mt-20 mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Stat 1 -->
+            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center"
+                data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="w-16 h-16 mx-auto bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4">
+                    <i class="ph-fill ph-lightning"></i>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-1">Ahorro Real</h3>
+                <div class="text-4xl font-extrabold text-primary mb-1">12.4 <span
+                        class="text-lg font-medium text-muted">kWh</span></div>
+                <p class="text-sm text-muted">Ahorrado este mes</p>
+            </div>
+            <!-- Stat 2 (Prime) -->
+            <div class="bg-primary p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-center text-white"
+                data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="w-16 h-16 mx-auto bg-white/20 text-accent rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4">
+                    <i class="ph-fill ph-chart-line-up"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-1">Consumo Actual</h3>
+                <div class="text-4xl font-extrabold text-white mb-1">254 <span
+                        class="text-lg font-medium text-white/70">W</span></div>
+                <p class="text-sm text-white/80">Monitoreo en tiempo real</p>
+            </div>
+            <!-- Stat 3 -->
+            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center"
+                data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4">
+                    <i class="ph-fill ph-plug"></i>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-1">Conectividad</h3>
+                <div class="text-4xl font-extrabold text-primary mb-1">8<span
+                        class="text-lg font-medium text-muted">/12</span></div>
+                <p class="text-sm text-muted">Dispositivos operativos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona (Nuevo) -->
+    <section id="como-funciona" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Cómo funciona EcoVolt</h2>
+                <p class="text-lg text-muted">En tres simples pasos transformarás tu casa en un hogar inteligente y
+                    eficiente.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <!-- Line connector for desktop -->
+                <div
+                    class="hidden md:block absolute top-[60px] left-[15%] right-[15%] h-1 bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 rounded-full z-0">
+                </div>
+
+                <div class="relative z-10 text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border-4 border-bg shadow-xl rounded-full flex items-center justify-center text-4xl text-primary group-hover:scale-110 group-hover:border-accent transition-all duration-300 mb-6">
+                        <i class="ph-fill ph-plugs-connected"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-3">1. Conecta</h3>
+                    <p class="text-muted">Integra nuestros enchufes e interruptores inteligentes a tus electrodomésticos
+                        sin necesidad de herramientas.</p>
+                </div>
+
+                <div class="relative z-10 text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border-4 border-bg shadow-xl rounded-full flex items-center justify-center text-4xl text-primary group-hover:scale-110 group-hover:border-accent transition-all duration-300 mb-6">
+                        <i class="ph-fill ph-device-mobile"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-3">2. Configura</h3>
+                    <p class="text-muted">Descarga la App EcoVolt, enlaza tus dispositivos en segundos y crea rutinas
+                        automáticas desde tu celular.</p>
+                </div>
+
+                <div class="relative z-10 text-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border-4 border-bg shadow-xl rounded-full flex items-center justify-center text-4xl text-accent group-hover:scale-110 group-hover:border-accent transition-all duration-300 mb-6">
+                        <i class="ph-fill ph-piggy-bank"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-accent mb-3">3. Ahorra</h3>
+                    <p class="text-muted">Nuestra IA aprenderá tus hábitos para apagar equipos ociosos y reducir tu
+                        recibo mensual dramáticamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="funciones" class="py-24 bg-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6">Gestión Total a tu Alcance</h2>
+                    <p class="text-lg text-muted mb-8">Controla desde luces hasta electrodomésticos con un solo clic.
+                        Agrega tus dispositivos y deja que EcoVolt los supervise mediante inteligencia artificial
+                        protegiendo tu economía.</p>
+
+                    <ul class="space-y-4">
+                        <!-- Device Item 1 -->
+                        <li
+                            class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center justify-between device-card">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center text-2xl">
+                                    <i class="ph-fill ph-snowflake"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary">Aire Acondicionado</h4>
+                                    <span class="text-sm text-accent font-medium d-status">En uso (1.2 kW)</span>
+                                </div>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer device-toggle" checked>
+                                <div
+                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent">
+                                </div>
+                            </label>
+                        </li>
+
+                        <!-- Device Item 2 -->
+                        <li
+                            class="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center justify-between device-card">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-500 flex items-center justify-center text-2xl">
+                                    <i class="ph-fill ph-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary">Iluminación Sala</h4>
+                                    <span class="text-sm text-accent font-medium d-status">Encendido (40 W)</span>
+                                </div>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer device-toggle" checked>
+                                <div
+                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent">
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-6 relative" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div
+                        class="absolute -top-10 -right-10 w-64 h-64 bg-[radial-gradient(circle_at_center,_rgba(80,200,120,0.15)_0%,_transparent_70%)] rounded-full -z-10">
+                    </div>
+
+                    <!-- Alert Card -->
+                    <div
+                        class="bg-white border border-gray-100 p-6 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform">
+                        <div class="flex items-center gap-2 font-bold text-alert mb-3 text-lg">
+                            <i class="ph-fill ph-warning-circle text-2xl"></i> Alerta Inteligente
+                        </div>
+                        <p class="text-muted mb-5">Consumo inusual detectado en el <strong
+                                class="text-dark">Refrigerador Principal</strong> debido a una posible fuga de frío.</p>
+                        <div class="flex gap-3">
+                            <button onclick="this.closest('.bg-white').style.display='none'" class="px-4 py-2 text-sm font-semibold rounded-lg border border-alert text-alert hover:bg-alert hover:text-white transition-colors">Ignorar</button>
+                            <a href="#faq" class="px-4 py-[7px] inline-block text-sm font-semibold rounded-lg bg-gray-100 text-primary hover:bg-gray-200 transition-colors">Más detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Routine Card -->
+                    <div
+                        class="bg-white border border-gray-100 p-6 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform ml-0 md:ml-10">
+                        <div class="flex items-center gap-2 font-bold text-primary mb-3 text-lg">
+                            <i class="ph-fill ph-sun-horizon text-2xl text-orange-500"></i> Rutina Matutina
+                        </div>
+                        <p class="text-muted mb-4">Cafetera y luces de cocina activadas según tu hábito horario
+                            preestablecido.</p>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/10 text-accent font-semibold rounded-full text-sm">
+                            <i class="ph-bold ph-check"></i> Ejecutado a las 06:30 AM
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios (Nuevo) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Lo que dicen nuestras familias</h2>
+                <p class="text-lg text-muted">Miles de hogares ya están ahorrando con EcoVolt</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Comentario 1 -->
+                <div class="bg-bg p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="flex text-yellow-500 mb-4 text-xl">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-muted italic mb-6">"Nunca imaginé que automatizar las luces y el aire me ahorraría un
+                        25% en mi recibo el primer mes. La instalación fue en 10 minutos."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full bg-cover"
+                            style="background-image: url('https://i.pravatar.cc/150?img=47');"></div>
+                        <div>
+                            <h5 class="font-bold text-primary">María Fernández</h5>
+                            <span class="text-xs text-muted">Lima, Perú</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comentario 2 -->
+                <div class="bg-bg p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex text-yellow-500 mb-4 text-xl">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-muted italic mb-6">"La alerta que me mandó la app antes de irme al trabajo porque
+                        dejé la estufa prendida no tiene precio. Genial ecosistema."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full bg-cover"
+                            style="background-image: url('https://i.pravatar.cc/150?img=11');"></div>
+                        <div>
+                            <h5 class="font-bold text-primary">Carlos Ruiz</h5>
+                            <span class="text-xs text-muted">Arequipa, Perú</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comentario 3 -->
+                <div class="bg-accent p-8 rounded-3xl shadow-lg border border-accent text-white" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="flex text-yellow-300 mb-4 text-xl">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-white/90 italic mb-6">"La mejor inversión del año. Ahora controlo el termostato antes
+                        de llegar a casa. Simplemente superó mis expectativas totalmente."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full bg-cover"
+                            style="background-image: url('https://i.pravatar.cc/150?img=33');"></div>
+                        <div>
+                            <h5 class="font-bold text-white">Lucía Gómez</h5>
+                            <span class="text-xs text-white/70">Cusco, Perú</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (Nuevo) -->
+    <section id="faq" class="py-24 bg-bg">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-primary mb-4">Preguntas Frecuentes</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                    data-aos="fade-up">
+                    <summary
+                        class="flex items-center justify-between p-6 font-semibold cursor-pointer text-primary bg-white marker:content-none">
+                        ¿Necesito hacer cambios eléctricos en mi casa?
+                        <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-muted">
+                        No, nuestros dispositivos son "Plug & Play". Funcionan colocándose sobre tus enchufes actuales o
+                        reemplazando los focos tradicionales. No necesitas cableado ni técnicos.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <summary
+                        class="flex items-center justify-between p-6 font-semibold cursor-pointer text-primary bg-white marker:content-none">
+                        ¿Funciona si se corta el Internet?
+                        <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-muted">
+                        Sí, las rutinas se guardan localmente en el Hub de EcoVolt. Si te quedas sin Wi-Fi, la casa
+                        seguirá operando sus rutinas programadas de manera normal.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <summary
+                        class="flex items-center justify-between p-6 font-semibold cursor-pointer text-primary bg-white marker:content-none">
+                        ¿Es compatible con Alexa o Google Home?
+                        <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-muted">
+                        Totalmente. Una vez configurado EcoVolt, puedes vincular tus cuentas de asistentes virtuales
+                        para gestionar todo mediante comandos de voz.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="registro" class="py-24 bg-primary relative overflow-hidden">
+        <!-- Decoraciones -->
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,_rgba(80,200,120,0.15)_0%,_transparent_70%)] rounded-full pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_0%,_transparent_70%)] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div
+                class="bg-primary-light border border-white/10 rounded-3xl p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center shadow-2xl">
+
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Únete al Futuro Verde</h2>
+                    <p class="text-lg text-white/80 mb-8">Crea tu cuenta EcoVolt, centraliza tu hogar y empieza a
+                        ahorrar mientras ayudas al planeta. Sin hardware complejo.</p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-white/90 text-lg">
+                            <i class="ph-bold ph-check-circle text-accent text-2xl"></i> Instalación garantizada en 5
+                            minutos
+                        </li>
+                        <li class="flex items-center gap-3 text-white/90 text-lg">
+                            <i class="ph-bold ph-check-circle text-accent text-2xl"></i> Soporte 24/7 y App gratuita
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-2xl" data-aos="fade-left">
+                    <form id="regForm">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Crear tu cuenta</h3>
+
+                        <div class="mb-5">
+                            <label class="block text-sm font-semibold text-primary mb-2">Nombre Completo</label>
+                            <input type="text" placeholder="Ej. Juan Pérez" required
+                                class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-accent focus:ring-0 outline-none transition-all text-dark">
+                        </div>
+
+                        <div class="mb-5">
+                            <label class="block text-sm font-semibold text-primary mb-2">Correo Electrónico</label>
+                            <input type="email" placeholder="juan@correo.com" required
+                                class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-accent focus:ring-0 outline-none transition-all text-dark">
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-primary mb-2">Contraseña</label>
+                            <input type="password" placeholder="••••••••" required
+                                class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-accent focus:ring-0 outline-none transition-all text-dark">
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-accent hover:bg-accent-hover text-white py-4 rounded-xl font-bold text-lg shadow-[0_8px_20px_rgba(80,200,120,0.3)] hover:shadow-[0_12px_25px_rgba(80,200,120,0.4)] transition-all">
+                            Registrarse en EcoVolt
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div class="md:col-span-5">
+                <a href="#inicio" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-primary mb-6">
+                    <i class="ph-fill ph-plant text-accent text-3xl"></i> EcoVolt
+                </a>
+                <p class="text-muted leading-relaxed text-lg max-w-sm">
+                    Tu hogar, más inteligente y eficiente usando Andean Ether AI. Protege el planeta mientras reduces
+                    tus gastos mensuales.
+                </p>
+                <!-- Redes sociales ficticias -->
+                <div class="flex gap-4 mt-6">
+                    <a href="https://facebook.com" target="_blank"
+                        class="w-10 h-10 rounded-full bg-bg flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-colors"><i
+                            class="ph-fill ph-facebook-logo text-xl"></i></a>
+                    <a href="https://twitter.com" target="_blank"
+                        class="w-10 h-10 rounded-full bg-bg flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-colors"><i
+                            class="ph-fill ph-twitter-logo text-xl"></i></a>
+                    <a href="https://instagram.com" target="_blank"
+                        class="w-10 h-10 rounded-full bg-bg flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-colors"><i
+                            class="ph-fill ph-instagram-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <div class="md:col-span-3">
+                <h4 class="font-bold text-primary text-xl mb-6">Producto</h4>
+                <ul class="space-y-4">
+                    <li><a href="#"
+                            class="text-muted hover:text-accent transition-colors font-medium" href="#funciones">Funcionalidades</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#faq">Precios y Planes</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#como-funciona">Dispositivos Compatibles</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#registro">Descargar App</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4">
+                <h4 class="font-bold text-primary text-xl mb-6">Compañía</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#inicio">Sobre Nosotros</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#inicio">Blog Verde</a>
+                    </li>
+                    <li><a href="tel:+51975984304" class="text-muted hover:text-accent transition-colors font-medium">Contacto de
+                            Soporte</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#inicio">Términos y Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-gray-100 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
+            <p>&copy; 2026 EcoVolt. Todos los derechos reservados.</p>
+            <p>Hecho con <i class="ph-fill ph-heart text-alert"></i> para un mundo verde.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/51975984304" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:scale-110 hover:shadow-2xl transition-all z-40 group"
+        aria-label="Contactar por WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+        <span
+            class="absolute overflow-hidden whitespace-nowrap bg-white text-dark text-sm px-0 py-1 rounded-full right-full mr-4 opacity-0 group-hover:px-4 group-hover:opacity-100 font-medium transition-all shadow-md flex items-center pointer-events-none">
+            ¡Hola! ¿Dudas?
+        </span>
+    </a>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
