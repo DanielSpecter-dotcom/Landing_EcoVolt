@@ -46,7 +46,8 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-btn" aria-label="Abrir menú de navegación" class="md:hidden text-primary text-3xl focus:outline-none">
+        <button id="mobile-menu-btn" aria-label="Abrir menú de navegación"
+            class="md:hidden text-primary text-3xl focus:outline-none">
             <i class="ph ph-list"></i>
         </button>
     </nav>
@@ -54,6 +55,9 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 pt-24 px-6 flex flex-col gap-6">
+        <button id="close-menu-btn" aria-label="Cerrar menú" class="absolute top-6 right-6 text-primary text-3xl">
+            <i class="ph ph-x"></i>
+        </button>
         <a href="#inicio" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Inicio</a>
         <a href="#como-funciona" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Cómo
             Funciona</a>
@@ -223,7 +227,8 @@
                                 </div>
                             </div>
                             <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" aria-label="Encender o apagar dispositivo" value="" class="sr-only peer device-toggle" checked>
+                                <input type="checkbox" aria-label="Encender o apagar dispositivo" value=""
+                                    class="sr-only peer device-toggle" checked>
                                 <div
                                     class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent">
                                 </div>
@@ -244,7 +249,8 @@
                                 </div>
                             </div>
                             <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" aria-label="Encender o apagar dispositivo" value="" class="sr-only peer device-toggle" checked>
+                                <input type="checkbox" aria-label="Encender o apagar dispositivo" value=""
+                                    class="sr-only peer device-toggle" checked>
                                 <div
                                     class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent">
                                 </div>
