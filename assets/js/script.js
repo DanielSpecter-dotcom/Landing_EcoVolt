@@ -145,4 +145,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     sections.forEach(section => navObserver.observe(section));
+
+    // Parallax Effect for Background Glows
+    const parallaxElements = document.querySelectorAll('.parallax-glow');
+    if (parallaxElements.length > 0) {
+        window.addEventListener('scroll', () => {
+            let scrollY = window.scrollY;
+            window.requestAnimationFrame(() => {
+                parallaxElements.forEach(el => {
+                    let speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
+                    el.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
+                });
+            });
+        });
+    }
 });
