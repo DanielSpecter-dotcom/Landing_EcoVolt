@@ -7,9 +7,16 @@
     <title>EcoVolt | Gestión Inteligente de Energía para tu Hogar</title>
     <meta name="description"
         content="Optimiza tu consumo, automatiza tus rutinas y ahorra en tu recibo de luz con el ecosistema Andean Ether.">
+    <!-- Meta tags de EcoVolt (Adriel) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EcoVolt | Gestión Inteligente de Energía">
+    <meta property="og:description" content="Optimiza tu consumo, automatiza tus rutinas y ahorra en tu recibo de luz.">
+    <meta property="og:image" content="assets/img/dashboard-mockup.png">
+
+    <!-- Favicon (Main) -->
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="rel" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="rel" type="image/png" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" href="assets/img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- AOS Animation CSS -->
@@ -50,10 +57,12 @@
                 class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">Acceder</a>
         </div>
 
-        <!-- Mobile Menu Toggle XD -->
-        <button id="mobile-menu-btn" class="md:hidden text-primary text-3xl focus:outline-none">
-            <i class="ph ph-list"></i>
-        </button>
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" 
+              aria-label="Abrir menú de navegación" 
+              class="md:hidden text-primary text-3xl focus:outline-none">
+          <i class="ph ph-list"></i>
+      </button> 
     </nav>
 
 
@@ -61,6 +70,9 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 pt-24 px-6 flex flex-col gap-6">
+        <button id="close-menu-btn" aria-label="Cerrar menú" class="absolute top-6 right-6 text-primary text-3xl">
+            <i class="ph ph-x"></i>
+        </button>
         <a href="#inicio" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Inicio</a>
         <a href="#como-funciona" class="text-2xl font-semibold text-primary border-b border-gray-100 pb-2">Cómo
             Funciona</a>
@@ -109,7 +121,7 @@
         <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-auto" data-aos="fade-left"
             data-aos-duration="1200" data-aos-delay="200">
             <div class="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-3xl -z-10"></div>
-            <img src="assets/img/dashboard-mockup.png" alt="Dashboard Principal de EcoVolt"
+            <img src="assets/img/dashboard-mockup.png" loading="lazy" alt="Dashboard Principal de EcoVolt"
                 class="w-full object-cover rounded-3xl shadow-2xl animate-floating bg-white/90 border border-white/80 p-2">
             <!-- Placeholder if image missing -->
             <div class="absolute inset-0 flex items-center justify-center -z-20 bg-gray-100 rounded-3xl">
@@ -235,7 +247,8 @@
                                 </div>
                             </div>
                             <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" class="sr-only peer device-toggle" checked>
+                                <input type="checkbox" aria-label="Encender o apagar dispositivo" value=""
+                                    class="sr-only peer device-toggle" checked>
                                 <div
                                     class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent">
                                 </div>
@@ -256,7 +269,8 @@
                                 </div>
                             </div>
                             <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" class="sr-only peer device-toggle" checked>
+                                <input type="checkbox" aria-label="Encender o apagar dispositivo" value=""
+                                    class="sr-only peer device-toggle" checked>
                                 <div
                                     class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent">
                                 </div>
@@ -506,14 +520,16 @@
                         <h3 class="text-2xl font-bold text-primary mb-6">Crear tu cuenta</h3>
 
                         <div class="mb-5">
-                            <label class="block text-sm font-semibold text-primary mb-2">Nombre Completo</label>
-                            <input type="text" placeholder="Ej. Juan Pérez" required
+                            <label for="Nombre" class="block text-sm font-semibold text-primary mb-2">Nombre
+                                Completo</label>
+                            <input type="text" id="Nombre" Ej. Juan Pérez" required
                                 class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-accent focus:ring-0 outline-none transition-all text-dark">
                         </div>
 
                         <div class="mb-5">
-                            <label class="block text-sm font-semibold text-primary mb-2">Correo Electrónico</label>
-                            <input type="email" placeholder="juan@correo.com" required
+                            <label for="correo" class="block text-sm font-semibold text-primary mb-2">Correo
+                                Electrónico</label>
+                            <input type="email" id="email" placeholder="juan@correo.com" required
                                 class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-accent focus:ring-0 outline-none transition-all text-dark">
                         </div>
 
@@ -521,6 +537,14 @@
                             <label class="block text-sm font-semibold text-primary mb-2">Contraseña</label>
                             <input type="password" placeholder="••••••••" required
                                 class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-accent focus:ring-0 outline-none transition-all text-dark">
+                        </div>
+
+                        <div class="mb-6 flex items-start gap-3">
+                            <input type="checkbox" id="terms" required class="mt-1 accent-accent">
+                            <label for="terms" class="text-sm text-muted">
+                                Acepto los <a href="#" class="text-primary font-semibold hover:underline">Términos de
+                                    servicio</a> y la Política de privacidad.
+                            </label>
                         </div>
 
                         <button type="submit"
