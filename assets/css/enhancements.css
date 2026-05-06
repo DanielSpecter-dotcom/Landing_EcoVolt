@@ -374,3 +374,37 @@ body {
   0% { opacity: 0.5; }
   100% { opacity: 1; }
 }
+
+/* ============================================
+   Mobile Responsive Fixes
+   ============================================ */
+
+/* Global overflow safety net */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Parallax glows must never cause overflow */
+.parallax-glow {
+  pointer-events: none;
+}
+
+/* Scale down impact numbers on small screens */
+@media (max-width: 640px) {
+  #impacto .text-5xl {
+    font-size: 2.5rem;
+  }
+
+  /* Reduce hero padding on very small screens */
+  header#inicio {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Ensure registration form doesn't overflow */
+  #registro .rounded-3xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
