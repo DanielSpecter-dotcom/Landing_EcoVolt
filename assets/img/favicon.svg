@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#50c878;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0b3d2e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Leaf shape -->
+  <path d="M16 2C16 2 6 8 6 18c0 6 4.5 10 10 12 5.5-2 10-6 10-12C26 8 16 2 16 2z" fill="url(#leafGrad)" />
+  <!-- Lightning bolt -->
+  <path d="M17.5 10L13 17h3.5L14.5 24L21 16h-3.5L17.5 10z" fill="white" />
+  <!-- Leaf vein -->
+  <path d="M16 8v16" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="none" />
+</svg>

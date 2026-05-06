@@ -33,13 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mobileMenu.classList.contains('translate-x-full')) {
                 // Abrir
                 mobileMenu.classList.remove('translate-x-full');
-                icon.classList.remove('ph-list');
-                icon.classList.add('ph-x');
+                icon.classList.replace('ph-list', 'ph-x');
+                menuToggleBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
             } else {
                 // Cerrar
                 mobileMenu.classList.add('translate-x-full');
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
+                icon.classList.replace('ph-x', 'ph-list');
+                menuToggleBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = ''; // Restaura el scroll
             }
         });
 
@@ -58,20 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggles = document.querySelectorAll('.device-toggle');
     toggles.forEach(toggle => {
         toggle.addEventListener('change', (e) => {
-            const card = e.target.closest('.device-card');
+            // Obtenemos la tarjeta padre más cercana
+            const card = e.target.closest('li'); 
             const statusSpan = card.querySelector('.d-status');
-            const iconContainer = card.querySelector('.rounded-xl');
-            const toggleWrapper = card.querySelector('.bg-gray-200'); // the visual track of the custom toggle is peer-checked driven, but we can do extra logic if needed
+            // Seleccionamos el contenedor del icono de forma más segura
+            const iconContainer = card.querySelector('div.w-12.h-12'); 
 
             if(e.target.checked) {
-                statusSpan.textContent = statusSpan.textContent.replace('Apagado', 'Encendido').replace('Inactivo', 'En uso');
-                statusSpan.classList.add('text-accent');
-                statusSpan.classList.remove('text-muted');
+                statusSpan.textContent = 'En uso (1.2 kW)'; // Es mejor setear el texto exacto
+                statusSpan.classList.replace('text-muted', 'text-accent');
                 iconContainer.classList.remove('opacity-50', 'grayscale');
             } else {
-                statusSpan.textContent = statusSpan.textContent.replace('Encendido', 'Apagado').replace('En uso', 'Inactivo');
-                statusSpan.classList.remove('text-accent');
-                statusSpan.classList.add('text-muted');
+                statusSpan.textContent = 'Inactivo (0 W)';
+                statusSpan.classList.replace('text-accent', 'text-muted');
                 iconContainer.classList.add('opacity-50', 'grayscale');
             }
         });
@@ -101,6 +102,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 3000);
                 
             }, 1500);
+        });
+    }
+
+    // Scroll-to-Top Button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Active Nav Link Highlighting
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('#nav-links a');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+    };
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-accent');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('text-accent');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => navObserver.observe(section));
+
+    // Parallax Effect for Background Glows
+    const parallaxElements = document.querySelectorAll('.parallax-glow');
+    if (parallaxElements.length > 0) {
+        window.addEventListener('scroll', () => {
+            let scrollY = window.scrollY;
+            window.requestAnimationFrame(() => {
+                parallaxElements.forEach(el => {
+                    let speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
+                    el.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
+                });
+            });
         });
     }
 });
