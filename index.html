@@ -7,10 +7,15 @@
     <title>EcoVolt | Gestión Inteligente de Energía para tu Hogar</title>
     <meta name="description"
         content="Optimiza tu consumo, automatiza tus rutinas y ahorra en tu recibo de luz con el ecosistema Andean Ether.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/enhancements.css">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -18,7 +23,7 @@
 <body class="font-inter bg-bg text-dark overflow-x-hidden selection:bg-accent selection:text-white">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white border-b border-primary/5 py-4 px-6 md:px-12 flex justify-between items-center"
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 border-b border-primary/5 py-4 px-6 md:px-12 flex justify-between items-center navbar-glass"
         id="navbar">
         <a href="#inicio" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-primary">
             <i class="ph-fill ph-plant text-accent text-3xl"></i> EcoVolt
@@ -51,6 +56,8 @@
         </button>
     </nav>
 
+
+
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 pt-24 px-6 flex flex-col gap-6">
@@ -64,6 +71,8 @@
     </div>
 
     <!-- Hero Section -->
+    <!-- Hero Section 123-->
+    <!--probando commint 1-->
     <header id="inicio"
         class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         <!-- Decoration Glow -->
@@ -73,8 +82,8 @@
 
         <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
             <div
-                class="inline-block px-4 py-1.5 bg-accent/15 text-primary-light border border-accent/30 rounded-full text-sm font-bold tracking-wide mb-6">
-                ✨ Nuevo Ecosistema Andean Ether
+                class="inline-block px-4 py-1.5 bg-accent/15 text-primary-light border border-accent/30 rounded-full text-sm font-bold tracking-wide mb-6 badge-shimmer">
+                <i class="ph-fill ph-sparkle text-accent"></i> Nuevo Ecosistema Andean Ether
             </div>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
                 Gestión Inteligente de <span class="text-accent">Energía</span> para tu Hogar
@@ -85,7 +94,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 items-center">
                 <a href="#registro"
-                    class="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white py-3.5 px-8 rounded-full font-bold shadow-[0_8px_25px_rgba(80,200,120,0.3)] hover:shadow-[0_12px_30px_rgba(80,200,120,0.4)] hover:-translate-y-1 transition-all duration-300 text-center">
+                    class="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white py-3.5 px-8 rounded-full font-bold shadow-[0_8px_25px_rgba(80,200,120,0.3)] hover:shadow-[0_12px_30px_rgba(80,200,120,0.4)] hover:-translate-y-1 transition-all duration-300 text-center cta-glow">
                     Empezar Ahora
                 </a>
                 <a href="#como-funciona"
@@ -111,38 +120,39 @@
     <section class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 -mt-10 lg:-mt-20 mb-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Stat 1 -->
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center"
+            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center stat-card"
                 data-aos="fade-up" data-aos-delay="100">
                 <div
-                    class="w-16 h-16 mx-auto bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4">
+                    class="w-16 h-16 mx-auto bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4 icon-float">
                     <i class="ph-fill ph-lightning"></i>
                 </div>
                 <h3 class="text-xl font-bold text-primary mb-1">Ahorro Real</h3>
-                <div class="text-4xl font-extrabold text-primary mb-1">12.4 <span
+                <div class="text-4xl font-extrabold text-primary mb-1 counter-value">12.4 <span
                         class="text-lg font-medium text-muted">kWh</span></div>
                 <p class="text-sm text-muted">Ahorrado este mes</p>
             </div>
             <!-- Stat 2 (Prime) -->
-            <div class="bg-primary p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-center text-white"
+            <div class="bg-primary p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-center text-white stat-card-primary"
                 data-aos="fade-up" data-aos-delay="200">
                 <div
-                    class="w-16 h-16 mx-auto bg-white/20 text-accent rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4">
+                    class="w-16 h-16 mx-auto bg-white/20 text-accent rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4 icon-float">
                     <i class="ph-fill ph-chart-line-up"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-1">Consumo Actual</h3>
-                <div class="text-4xl font-extrabold text-white mb-1">254 <span
+                <div class="text-4xl font-extrabold text-white mb-1 counter-value">254 <span
                         class="text-lg font-medium text-white/70">W</span></div>
                 <p class="text-sm text-white/80">Monitoreo en tiempo real</p>
+                <div class="live-dot"><span></span> En vivo</div>
             </div>
             <!-- Stat 3 -->
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center"
+            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 text-center stat-card"
                 data-aos="fade-up" data-aos-delay="300">
                 <div
-                    class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4">
+                    class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-4 icon-float">
                     <i class="ph-fill ph-plug"></i>
                 </div>
                 <h3 class="text-xl font-bold text-primary mb-1">Conectividad</h3>
-                <div class="text-4xl font-extrabold text-primary mb-1">8<span
+                <div class="text-4xl font-extrabold text-primary mb-1 counter-value">8<span
                         class="text-lg font-medium text-muted">/12</span></div>
                 <p class="text-sm text-muted">Dispositivos operativos</p>
             </div>
@@ -267,8 +277,11 @@
                         <p class="text-muted mb-5">Consumo inusual detectado en el <strong
                                 class="text-dark">Refrigerador Principal</strong> debido a una posible fuga de frío.</p>
                         <div class="flex gap-3">
-                            <button onclick="this.closest('.bg-white').style.display='none'" class="px-4 py-2 text-sm font-semibold rounded-lg border border-alert text-alert hover:bg-alert hover:text-white transition-colors">Ignorar</button>
-                            <a href="#faq" class="px-4 py-[7px] inline-block text-sm font-semibold rounded-lg bg-gray-100 text-primary hover:bg-gray-200 transition-colors">Más detalles</a>
+                            <button onclick="this.closest('.bg-white').style.display='none'"
+                                class="px-4 py-2 text-sm font-semibold rounded-lg border border-alert text-alert hover:bg-alert hover:text-white transition-colors">Ignorar</button>
+                            <a href="#faq"
+                                class="px-4 py-[7px] inline-block text-sm font-semibold rounded-lg bg-gray-100 text-primary hover:bg-gray-200 transition-colors">Más
+                                detalles</a>
                         </div>
                     </div>
 
@@ -300,7 +313,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Comentario 1 -->
-                <div class="bg-bg p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up"
+                <div class="bg-bg p-8 rounded-3xl shadow-sm border border-gray-100 testimonial-card" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="flex text-yellow-500 mb-4 text-xl">
                         <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
@@ -318,7 +331,7 @@
                     </div>
                 </div>
                 <!-- Comentario 2 -->
-                <div class="bg-bg p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up"
+                <div class="bg-bg p-8 rounded-3xl shadow-sm border border-gray-100 testimonial-card" data-aos="fade-up"
                     data-aos-delay="200">
                     <div class="flex text-yellow-500 mb-4 text-xl">
                         <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
@@ -336,8 +349,8 @@
                     </div>
                 </div>
                 <!-- Comentario 3 -->
-                <div class="bg-accent p-8 rounded-3xl shadow-lg border border-accent text-white" data-aos="fade-up"
-                    data-aos-delay="300">
+                <div class="bg-accent p-8 rounded-3xl shadow-lg border border-accent text-white testimonial-card-accent"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="flex text-yellow-300 mb-4 text-xl">
                         <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
                             class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -364,7 +377,7 @@
                 <h2 class="text-3xl font-bold text-primary mb-4">Preguntas Frecuentes</h2>
             </div>
             <div class="space-y-4">
-                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden faq-item"
                     data-aos="fade-up">
                     <summary
                         class="flex items-center justify-between p-6 font-semibold cursor-pointer text-primary bg-white marker:content-none">
@@ -376,7 +389,7 @@
                         reemplazando los focos tradicionales. No necesitas cableado ni técnicos.
                     </div>
                 </details>
-                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden faq-item"
                     data-aos="fade-up" data-aos-delay="100">
                     <summary
                         class="flex items-center justify-between p-6 font-semibold cursor-pointer text-primary bg-white marker:content-none">
@@ -388,7 +401,7 @@
                         seguirá operando sus rutinas programadas de manera normal.
                     </div>
                 </details>
-                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden faq-item"
                     data-aos="fade-up" data-aos-delay="200">
                     <summary
                         class="flex items-center justify-between p-6 font-semibold cursor-pointer text-primary bg-white marker:content-none">
@@ -471,7 +484,8 @@
     <footer class="bg-white pt-20 pb-10 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
             <div class="md:col-span-5">
-                <a href="#inicio" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-primary mb-6">
+                <a href="#inicio"
+                    class="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-primary mb-6">
                     <i class="ph-fill ph-plant text-accent text-3xl"></i> EcoVolt
                 </a>
                 <p class="text-muted leading-relaxed text-lg max-w-sm">
@@ -495,11 +509,14 @@
             <div class="md:col-span-3">
                 <h4 class="font-bold text-primary text-xl mb-6">Producto</h4>
                 <ul class="space-y-4">
-                    <li><a href="#"
-                            class="text-muted hover:text-accent transition-colors font-medium" href="#funciones">Funcionalidades</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#faq">Precios y Planes</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#como-funciona">Dispositivos Compatibles</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#registro">Descargar App</a>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#funciones">Funcionalidades</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#faq">Precios y Planes</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#como-funciona">Dispositivos Compatibles</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#registro">Descargar App</a>
                     </li>
                 </ul>
             </div>
@@ -507,12 +524,16 @@
             <div class="md:col-span-4">
                 <h4 class="font-bold text-primary text-xl mb-6">Compañía</h4>
                 <ul class="space-y-4">
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#inicio">Sobre Nosotros</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#inicio">Blog Verde</a>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#inicio">Sobre Nosotros</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#inicio">Blog Verde</a>
                     </li>
-                    <li><a href="tel:+51975984304" class="text-muted hover:text-accent transition-colors font-medium">Contacto de
+                    <li><a href="tel:+51975984304"
+                            class="text-muted hover:text-accent transition-colors font-medium">Contacto de
                             Soporte</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium" href="#inicio">Términos y Privacidad</a></li>
+                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
+                            href="#inicio">Términos y Privacidad</a></li>
                 </ul>
             </div>
         </div>
@@ -524,9 +545,17 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top-btn"
+        class="fixed bottom-24 right-6 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-primary-light hover:shadow-xl hover:-translate-y-1 transition-all z-40 opacity-0 pointer-events-none scroll-top-btn"
+        aria-label="Volver arriba">
+        <i class="ph-bold ph-arrow-up"></i>
+    </button>
+
     <!-- Floating WhatsApp Button -->
+    <!-- Whatsapp seccion numero -->
     <a href="https://wa.me/51975984304" target="_blank" rel="noopener noreferrer"
-        class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:scale-110 hover:shadow-2xl transition-all z-40 group"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:scale-110 hover:shadow-2xl transition-all z-40 group whatsapp-pulse"
         aria-label="Contactar por WhatsApp">
         <i class="ph-fill ph-whatsapp-logo"></i>
         <span
