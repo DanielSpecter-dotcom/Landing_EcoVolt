@@ -60,9 +60,10 @@
       <!-- Mobile Menu Toggle -->
       <button id="mobile-menu-btn" 
               aria-label="Abrir menú de navegación" 
+              aria-expanded="false"
               class="md:hidden text-primary text-3xl focus:outline-none">
           <i class="ph ph-list"></i>
-      </button> 
+      </button>
     </nav>
 
 
@@ -121,8 +122,10 @@
         <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-auto" data-aos="fade-left"
             data-aos-duration="1200" data-aos-delay="200">
             <div class="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-3xl -z-10"></div>
-            <img src="assets/img/dashboard-mockup.png" loading="lazy" alt="Dashboard Principal de EcoVolt"
-                class="w-full object-cover rounded-3xl shadow-2xl animate-floating bg-white/90 border border-white/80 p-2">
+              <img src="assets/img/dashboard-mockup.png" 
+                   alt="Dashboard Principal de EcoVolt"
+                   class="w-full object-cover rounded-3xl shadow-2xl animate-floating bg-white/90 border border-white/80 p-2" 
+                   loading="lazy">
             <!-- Placeholder if image missing -->
             <div class="absolute inset-0 flex items-center justify-center -z-20 bg-gray-100 rounded-3xl">
                 <span class="text-gray-400">Mockup Image Placeholder</span>
@@ -585,35 +588,25 @@
             </div>
 
             <div class="md:col-span-3">
-                <h4 class="font-bold text-primary text-xl mb-6">Producto</h4>
-                <ul class="space-y-4">
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#funciones">Funcionalidades</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#faq">Precios y Planes</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#como-funciona">Dispositivos Compatibles</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#registro">Descargar App</a>
-                    </li>
-                </ul>
-            </div>
+              <div class="md:col-span-4">
+                  <h4 class="font-bold text-primary text-xl mb-6">Producto</h4>
+                  <ul class="space-y-4">
+                      <li><a href="#funciones" class="text-muted hover:text-accent transition-colors font-medium">Funcionalidades</a></li>
+                      <li><a href="#faq" class="text-muted hover:text-accent transition-colors font-medium">Precios y Planes</a></li>
+                      <li><a href="#como-funciona" class="text-muted hover:text-accent transition-colors font-medium">Dispositivos Compatibles</a></li>
+                      <li><a href="#registro" class="text-muted hover:text-accent transition-colors font-medium">Descargar App</a></li>
+                  </ul>
+              </div>
 
-            <div class="md:col-span-4">
-                <h4 class="font-bold text-primary text-xl mb-6">Compañía</h4>
-                <ul class="space-y-4">
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#inicio">Sobre Nosotros</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#inicio">Blog Verde</a>
-                    </li>
-                    <li><a href="tel:+51975984304"
-                            class="text-muted hover:text-accent transition-colors font-medium">Contacto de
-                            Soporte</a></li>
-                    <li><a href="#" class="text-muted hover:text-accent transition-colors font-medium"
-                            href="#inicio">Términos y Privacidad</a></li>
-                </ul>
-            </div>
+              <div class="md:col-span-4">
+                  <h4 class="font-bold text-primary text-xl mb-6">Compañía</h4>
+                  <ul class="space-y-4">
+                      <li><a href="#inicio" class="text-muted hover:text-accent transition-colors font-medium">Sobre Nosotros</a></li>
+                      <li><a href="#inicio" class="text-muted hover:text-accent transition-colors font-medium">Blog Verde</a></li>
+                      <li><a href="tel:+51975984304" class="text-muted hover:text-accent transition-colors font-medium">Contacto de Soporte</a></li>
+                      <li><a href="#inicio" class="text-muted hover:text-accent transition-colors font-medium">Términos y Privacidad</a></li>
+                  </ul>
+              </div>
         </div>
 
         <div
